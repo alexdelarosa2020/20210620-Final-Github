@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/6a79530112.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/main.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>MAdmin</title>
+</head>
+<body>
+  <nav class="blue darken-2">
+      <div class="container">
+          <div class="nav-wrapper">
+              <a href="project1.html" class="brand-logo">MAdmin</a>
+              <a href="#" data-target="slide-out" class="button-collapse 
+              show-on-large right sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li class="active">
+                        <a href="project1.html" class="">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="post.html">Posts</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Categories</a>
+                    </li>
+                    <li>
+                        <a href="comments.html">Comments</a>
+                    </li>
+                    <li>
+                        <a href="users.html">User</a>
+                    </li>
+                </ul>
+          </div>
+      </div>
+  </nav>
+  <ul id="slide-out" class="sidenav">
+      <li>
+          <div class="user-view">
+              <div class="background">
+                  <img src="Image/ocean.jpg" alt="">
+              </div>
+              <a href="#">
+                  <img src="Image/person1.jpg" alt="" class="circle">
+                </a>
+                <a href="#">
+                    <span class="name white-text">Mr. Jan Bahringer</span>
+                </a>
+                <a href="#">
+                    <span class="email white-text">bahringer@gmail.com</span>
+                </a>
+          </div>
+      </li>
+      <li>
+          <a href="project1.html">
+              <i class="material-icons">dashboard</i>Dashboard
+          </a>
+      </li>
+        <li>
+            <a href="post.html">Posts</a>
+        </li>
+        <li>
+            <a href="categories.html">Categories</a>
+        </li>
+        <li>
+            <a href="comments.html">Comments</a>
+        </li>
+        <li>
+            <a href="users.html">User</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a class="subheader">Account Controls</a>
+        </li>
+        <li><a href="login.html" class="waves-effect">Logout</a></li>
+  </ul>
+
+  <!-- Section Stats -->
+  <section class="section section-stats center">
+      <div class="row">
+          <div class="col s12 m6 l3">
+              <div class="card-panel blue lighten-1 white-text center">
+                  <i class="material-icons medium">insert_emoticon</i>
+                  <h5>Monthly Visitors</h5>
+                  <h3 class="count">28500</h3>
+                  <div class="progress grey lighten-1">
+                    <div class="determinate white" style="width:40%"></div>
+                </div>
+              </div>
+          </div>
+          <div class="col s12 m6 l3">
+              <div class="card-panel center">
+                  <i class="material-icons medium">mode_edit</i>
+                  <h5>Blog Post</h5>
+                  <h3 class="count">105</h3>
+                  <div class="progress grey lighten-1">
+                      <div class="determinate blue" style="width:40%"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="col s12 m6 l3">
+              <div class="card-panel blue lighten-1 white-text center">
+                  <i class="material-icons medium">mode_comment</i>
+                  <h5>Comments</h5>
+                  <h3 class="count">3500</h3>
+                  <div class="progress grey lighten-1">
+                    <div class="determinate white" style="width:80%"></div>
+                </div>
+              </div>
+          </div>
+          <div class="col s12 m6 l3">
+              <div class="card-panel center">
+                  <i class="material-icons medium">supervisor_account</i>
+                  <h5>Users</h5>
+                  <h3 class="count">2300</h3>
+                  <div class="progress grey lighten-1">
+                    <div class="determinate blue" style="width:10%"></div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Preloader -->
+  <div class="loader preloader-wrapper big active">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    // Hide Section
+    $('.section').hide();
+        setTimeout(function() {
+            $(document).ready(function(){
+    // Sidenav
+    $('.sidenav').sidenav();
+    // Show Section
+    $('.section').fadeIn();
+    // Hide PreLoader
+    $('.loader').fadeOut();
+    // Counter
+    $('.count').each(function() {
+            $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+            }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function(now) {
+                $(this).text(Math.ceil(now));
+            }
+          });
+        });
+    });
+        }, 1000);
+
+</script>
+
+</body>
+</html> 

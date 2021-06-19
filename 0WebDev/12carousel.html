@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/80a9691e2b.js" crossorigin="anonymous"></script>
+    <!--icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Carousel</title>
+    <style>
+        body {
+            padding: auto;
+            margin: 0%;
+        }
+        .carousel {
+            height: 400px;
+            perspective: 600px;
+        }
+        .carousel .carousel-item {
+            width: 300px;
+        }
+    </style>
+</head>
+<body class="grey">
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="#" class="brand-logo">Group 3</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="2C.html">Full Width</a>
+                    </li>
+                    <li>
+                        <a href="last.html">Special Option</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<div class="center">
+<h1>Carousel</h1>
+<p>Our Carousel is a robust and versatile component that can be an image slider, to an item carousel, to an onboarding experience.</p>
+</div>
+        <div class="carousel">
+            <a class="carousel-item" href="#">
+                <img src="Images/earth.jpg"></a>
+            <a class="carousel-item" href="#">
+                <img src="Images/Pine.jpg"></a>
+            <a class="carousel-item" href="#">
+                <img src="Images/shin.jpg"></a>
+            <a class="carousel-item" href="#">
+                <img src="Images/shin1.jpg"></a>
+            <a class="carousel-item" href="#">
+                <img src="Images/shin2.jpg"></a>
+            <a class="carousel-item" href="#">
+                <img src="Images/shin3.jpg"></a>
+            <a class="carousel-item" href="#">
+                <img src="Images/TreeCoin.jpg"></a>
+            <a class="carousel-item" href="#">
+                <img src="Images/Tree.jpg"></a>
+        </div>
+    </div>
+</div>
+    <!-- JQUERY CODE-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--initialization-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+            var options = {
+                fullWidth: false,
+                indicators: false,
+            };
+            var elems = document.querySelector('.carousel.no-autoinit');
+            console.log(elems)
+            var instances = M.Carousel.init(elems, options);
+        })
+    </script>
+    </script>
+     <script> $(document).ready(function(){
+       $('.sidenav').sidenav();
+     });
+    </script>
+</body>
+</html>
+

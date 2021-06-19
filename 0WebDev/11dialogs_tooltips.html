@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/6a79530112.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Dialogs</title>
+  <style>
+    .toast{
+    background-color:rgb(86, 236, 106)
+    }
+    </style>
+</head>
+<body class="grey">
+  <div class="container">
+    <h1>Dialogs Tooltips</h1>
+    <a class="btn tooltipped blue waves-effect waves-light" data-position="left" data-tooltip="Group 3 Baba">Hover me!</a>
+    <a class="btn tooltipped red waves-effect waves-light red" data-position="top" data-tooltip="Group 3 Taas">Hover me!</a>
+    <a class="btn tooltipped white black-text waves-effect waves-dark" data-position="bottom" data-tooltip="Group 3 Kaliwa">Hover me!</a>
+    <a class="btn tooltipped yellow waves-effect waves-light" data-position="right" data-tooltip="Group 3 Kanan">Hover me!</a>
+  </div>
+
+
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.tooltipped').tooltip({
+        enterDelay: 3,
+        margin: 0, 
+      });
+    })
+  </script>
+</body>
+</html> 
+
